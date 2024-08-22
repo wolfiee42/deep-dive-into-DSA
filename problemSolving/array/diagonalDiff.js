@@ -6,10 +6,10 @@ const squareArr = [
   [9, 8, 9],
 ];
 
-let sum1 = 0;
-let sum2 = 0;
-
 function diagonalDifference(arr) {
+  let sum1 = 0;
+  let sum2 = 0;
+
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr.length; j++) {
       // \ diagonal
@@ -22,8 +22,8 @@ function diagonalDifference(arr) {
       }
     }
   }
-  console.log(sum1);
-  console.log(sum2);
+  const difference = Math.abs(sum1 - sum2);
+  return difference;
 }
 
-diagonalDifference(squareArr);
+console.log(diagonalDifference(squareArr));
