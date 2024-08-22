@@ -22,7 +22,12 @@ function diagonalDifference(arr) {
       }
     }
   }
-  const difference = Math.abs(sum1 - sum2);
+
+  let difference = sum1 - sum2;
+  if (difference < 0) {
+    difference = -difference;
+  }
+
   return difference;
 }
 
