@@ -1,3 +1,5 @@
+// recursive means calls itself
+
 function recursiveFibonacci(n) {
   if (n < 2) {
     return n;
