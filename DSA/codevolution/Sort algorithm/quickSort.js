@@ -24,3 +24,6 @@ function quickSort(arr) {
 
 const arr = [8, 20, -2, 4, -6];
 console.log(quickSort(arr)); // Output: [-6, -2, 4, 8, 20]
+
+// Worst-case time complexity: O(n^2)
+// Average-case time complexity: O(n log(n))
