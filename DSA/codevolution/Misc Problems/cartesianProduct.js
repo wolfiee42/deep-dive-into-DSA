@@ -17,4 +17,4 @@ const b = [3, 4, 5];
 
 console.log(cartesianProduct(a, b)); //  [ [ 1, 3 ], [ 1, 4 ], [ 1, 5 ], [ 2, 3 ], [ 2, 4 ], [ 2, 5 ] ]
 
-//Big-O = O(mn)
+//Big-O = O(m*n)
