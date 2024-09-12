@@ -16,14 +16,17 @@ let arr = [1, 2, 3, "Saif"];
 // arr.pop();
 // const lastIndex = arr.length - 1;
 // let newArr = [];
-// for (let i = 0; i <= lastIndex; i++) {
-//   if (i !== lastIndex) {
-//     newArr[i] = arr[i];
-//   }
+// for (let i = 0; i <= lastIndex - 1; i++) {
+//   newArr[i] = arr[i];
 // }
 // console.log(newArr);
 
 // arr.shift();
+// let newArr = [];
+// for (let i = 1; i < arr.length; i++) {
+//   newArr[i - 1] = arr[i];
+// }
+// console.log(newArr);
 
 // for (item of arr) {
 //   console.log(item);
