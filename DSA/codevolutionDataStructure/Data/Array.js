@@ -32,4 +32,30 @@ let arr = [1, 2, 3, "Saif"];
 //   console.log(item);
 // }
 
-// map, filter, reduce, concat, slice, splice.
+//map
+// arr.map((item) => console.log(item));
+// for (let i = 0; i < arr.length; i++) {
+//   console.log(arr[i]);
+// }
+
+// -----------------------------------
+//filter
+// const filteredArr = arr.filter(removeNum);
+
+// function removeNum(num) {
+//   return num !== 3;
+// }
+// console.log(filteredArr);
+
+// let newArrInd = 0;
+// let newArr = [];
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] === 3) continue;
+//   newArr[newArrInd] = arr[i];
+//   newArrInd++;
+// }
+
+// console.log(newArr);
+// -----------------------------------
+
+//  reduce, concat, slice, splice.
