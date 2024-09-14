@@ -58,4 +58,18 @@ let arr = [1, 2, 3, "Saif"];
 // console.log(newArr);
 // -----------------------------------
 
+let arr2 = [1, 2, 3, 4];
+
+// const totalPrice = arr2.reduce((accumulator, arr2) => {
+//   return (accumulator += arr2);
+// }, 0);
+
+let sum = 0;
+for (let i = 0; i < arr2.length; i++) {
+  sum += arr2[i];
+}
+
+// console.log(totalPrice);
+console.log(sum);
+
 //  reduce, concat, slice, splice.
