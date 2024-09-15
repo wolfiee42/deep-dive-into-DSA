@@ -73,35 +73,35 @@ let arr2 = [1, 2, 3, 4];
 // console.log(totalPrice);
 // console.log(sum);
 
-const arr1 = ["Cecilie", "Lone"];
-const arr24 = ["Emil", "Tobias", "Linus"];
-const arr3 = ["Robin"];
-const children = arr1.concat(arr24, arr3);
-console.log(children);
+// const arr1 = ["Cecilie", "Lone"];
+// const arr24 = ["Emil", "Tobias", "Linus"];
+// const arr3 = ["Robin"];
+// const children = arr1.concat(arr24, arr3);
+// console.log(children);
 
-let newArr = [];
-let newArrInd = 0;
+// let newArr = [];
+// let newArrInd = 0;
 
-newArr = [...arr1, ...arr24, ...arr3];
-console.log(newArr);
+// newArr = [...arr1, ...arr24, ...arr3];
+// console.log(newArr);
 
-let newArr2 = [];
-let newArrInd2 = 0;
+// let newArr2 = [];
+// let newArrInd2 = 0;
 
-for (let i = 0; i < arr1.length; i++) {
-  newArr2[newArrInd2] = arr1[i];
-  newArrInd2++;
-}
+// for (let i = 0; i < arr1.length; i++) {
+//   newArr2[newArrInd2] = arr1[i];
+//   newArrInd2++;
+// }
 
-for (let i = 0; i < arr24.length; i++) {
-  newArr2[newArrInd2] = arr24[i];
-  newArrInd2++;
-}
-for (let i = 0; i < arr3.length; i++) {
-  newArr2[newArrInd2] = arr3[i];
-  newArrInd2++;
-}
+// for (let i = 0; i < arr24.length; i++) {
+//   newArr2[newArrInd2] = arr24[i];
+//   newArrInd2++;
+// }
+// for (let i = 0; i < arr3.length; i++) {
+//   newArr2[newArrInd2] = arr3[i];
+//   newArrInd2++;
+// }
 
-console.log(newArr2);
+// console.log(newArr2);
 
-//   concat, slice, splice.
+//  slice, splice.
