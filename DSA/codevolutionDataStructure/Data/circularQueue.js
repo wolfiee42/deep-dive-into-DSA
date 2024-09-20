@@ -26,6 +26,18 @@ class CircularQueue {
     }
   }
 
+  // practicing to understand the code.
+  enqueue2(element) {
+    if (!this.isFull) {
+      this.rear = (this.rear + 1) % this.capacity;
+      this.items[this.rear] = element;
+      this.currentLength += 1;
+      if (this.front === -1) {
+        this.front = this.rear;
+      }
+    }
+  }
+
   dequeue() {
     if (this.isEmpty()) {
       return null;
@@ -37,6 +49,23 @@ class CircularQueue {
     if (this.isEmpty()) {
       this.front = -1;
       this.rear = -1;
+    }
+    return item;
+  }
+
+  // practicing to understand the code.
+  dequeue2() {
+    if (this.isEmpty) {
+      return `queue is empty.`;
+    }
+    let item = this.items[this.front];
+    this.items[this.front] = null;
+    this.front = (this.front + 1) % this.capacity;
+    this.currentLength -= 1; //missed this line to write.
+    // this.items[this.front] = item; //this is mistake. should not need for this.
+    if (this.isEmpty) {
+      this.rear = -1;
+      this.front = -1;
     }
     return item;
   }
