@@ -51,6 +51,20 @@ class CircularQueue {
   size() {
     return this.currentLength;
   }
+
+  print() {
+    if (this.isEmpty()) {
+      console.log(`Queue is Empty`);
+    } else {
+      let i;
+      let str = "";
+      for (i = this.front; i !== this.rear; i = (i + 1) % this.capacity) {
+        str += this.items[i] + " ";
+      }
+      str += this.items[i];
+      console.log(str);
+    }
+  }
 }
 
 const queue = new CircularQueue(5);
