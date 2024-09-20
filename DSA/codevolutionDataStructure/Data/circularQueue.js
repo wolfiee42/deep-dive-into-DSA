@@ -47,6 +47,10 @@ class CircularQueue {
     }
     return this.items[this.front];
   }
+
+  size() {
+    return this.currentLength;
+  }
 }
 
 const queue = new CircularQueue(5);
