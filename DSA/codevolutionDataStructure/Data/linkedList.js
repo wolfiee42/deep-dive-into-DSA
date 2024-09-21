@@ -24,17 +24,34 @@ class LinkedList {
     if (this.isEmpty()) {
       this.head = node;
     } else {
-      this.next = this.head;
+      node.next = this.head;
       this.head = node;
     }
     this.size++;
+  }
+
+  print() {
+    if (this.isEmpty()) {
+      console.log(`List is empty.`);
+    } else {
+      let curr = this.head;
+      let listValues = "";
+
+      while (curr) {
+        listValues += `${curr.value} `;
+        curr = curr.next;
+      }
+      console.log(listValues);
+    }
   }
 }
 
 const linkedList = new LinkedList();
 console.log("List is empty?", linkedList.isEmpty());
 console.log("List size:", linkedList.getSize());
-
+linkedList.print();
 linkedList.prepend(10);
+linkedList.print();
 linkedList.prepend(20);
 linkedList.prepend(30);
+linkedList.print();
