@@ -19,6 +19,7 @@ class LinkedList {
     return this.size;
   }
 
+  // O(1)
   prepend(value) {
     const node = new Node(value);
     if (this.isEmpty()) {
@@ -30,10 +31,17 @@ class LinkedList {
     this.size++;
   }
 
+  // O(n)
   append(value) {
     const node = new Node(value);
     if (this.isEmpty()) {
       this.head = node;
+    } else {
+      let prev = this.head;
+      while (prev.next) {
+        prev = prev.next;
+      }
+      prev.next = node;
     }
     this.size++;
   }
@@ -58,8 +66,8 @@ const linkedList = new LinkedList();
 console.log("List is empty?", linkedList.isEmpty());
 console.log("List size:", linkedList.getSize());
 linkedList.print();
-linkedList.prepend(10);
+linkedList.append(10);
 linkedList.print();
-linkedList.prepend(20);
-linkedList.prepend(30);
+linkedList.append(20);
+linkedList.append(30);
 linkedList.print();
