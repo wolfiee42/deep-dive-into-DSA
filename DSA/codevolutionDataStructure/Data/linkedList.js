@@ -113,3 +113,5 @@ linkedList.insert(25, 2);
 linkedList.print();
 console.log(linkedList.removeFrom(0));
 linkedList.print();
+console.log(linkedList.removeFrom(1));
+linkedList.print();
