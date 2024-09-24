@@ -111,6 +111,22 @@ class LinkedList {
     }
   }
 
+  search(value) {
+    if (this.isEmpty()) {
+      return -1;
+    }
+    let i = 0;
+    let curr = this.head;
+    while (curr) {
+      if (curr.value === value) {
+        return i;
+      }
+      curr = curr.next;
+      i++;
+    }
+    return -1;
+  }
+
   print() {
     if (this.isEmpty()) {
       console.log(`List is empty.`);
@@ -138,11 +154,7 @@ linkedList.append(20);
 linkedList.append(30);
 linkedList.insert(25, 2);
 linkedList.print();
-console.log(linkedList.removeValue(30));
-linkedList.print();
-console.log(linkedList.removeValue(20));
-linkedList.print();
-console.log(linkedList.removeValue(60));
-linkedList.print();
-// console.log(linkedList.removeFrom(1));
-// linkedList.print();
+console.log(linkedList.search(10));
+console.log(linkedList.search(20));
+console.log(linkedList.search(30));
+console.log(linkedList.search(40));
