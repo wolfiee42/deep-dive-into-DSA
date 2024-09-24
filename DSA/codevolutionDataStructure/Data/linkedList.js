@@ -86,13 +86,16 @@ class LinkedList {
 
   removeValue(value) {
     if (this.isEmpty()) {
+      //if empty
       return null;
     }
     if (this.head.value === value) {
+      //if lists length is 1 or the first value of the list is the removeable value
       this.head = this.head.next;
       this.size--;
       return value;
     } else {
+      //if the removeable value is randomly stored in the value.
       let prev = this.head;
       while (prev.next && prev.next.value !== value) {
         prev = prev.next;
@@ -103,6 +106,7 @@ class LinkedList {
         this.size--;
         return value;
       }
+      // the last value of the list.
       return null;
     }
   }
