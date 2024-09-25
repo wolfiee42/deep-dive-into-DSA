@@ -25,7 +25,9 @@ class linkedList {
       this.head = node;
       this.tail = node;
     } else {
+      // 1. the existing head will be in number 2.
       node.next = this.head;
+      // 2. the coming node is becoming number 1.
       this.head = node;
     }
     this.size++;
