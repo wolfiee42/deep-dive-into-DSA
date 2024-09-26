@@ -101,3 +101,7 @@ list.append(3);
 list.prepend(0);
 list.print();
 console.log("List size ", list.getSize());
+
+list.removeFromFront();
+list.removeFromEnd();
+list.print();
