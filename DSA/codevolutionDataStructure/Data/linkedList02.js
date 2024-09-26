@@ -55,7 +55,25 @@ class linkedList {
     return value;
   }
 
-  removeFromEnd() {}
+  removeFromEnd() {
+    if (this.isEmpty()) {
+      return null;
+    }
+    const value = this.tail.value;
+    if (this.size === 1) {
+      this.head = null;
+      this.tail = null;
+    } else {
+      let prev = this.head;
+      while (prev.next !== this.tail) {
+        prev = prev.next;
+      }
+      prev.next = null;
+      this.tail = prev;
+    }
+    this.size--;
+    return value;
+  }
 
   print() {
     if (this.isEmpty()) {
