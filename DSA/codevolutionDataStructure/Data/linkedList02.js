@@ -45,6 +45,18 @@ class linkedList {
     this.size++;
   }
 
+  removeFromFront() {
+    if (this.isEmpty()) {
+      return null;
+    }
+    const value = this.head.value;
+    this.head = this.head.next;
+    this.size--;
+    return value;
+  }
+
+  removeFromEnd() {}
+
   print() {
     if (this.isEmpty()) {
       return null;
