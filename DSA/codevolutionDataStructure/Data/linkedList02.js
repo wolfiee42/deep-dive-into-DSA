@@ -5,7 +5,7 @@ class Node {
   }
 }
 
-class linkedList {
+class LinkedList {
   constructor() {
     this.head = null;
     this.tail = null;
@@ -83,10 +83,21 @@ class linkedList {
       let listValues = "";
 
       while (curr) {
-        listValues += `${curr.value}`;
+        listValues += `${curr.value} `;
         curr = curr.next;
       }
       console.log(listValues);
     }
   }
 }
+
+const list = new LinkedList();
+console.log("List is empty? ", list.isEmpty());
+console.log("List size ", list.getSize());
+
+list.append(1);
+list.append(2);
+list.append(3);
+list.prepend(0);
+list.print();
+console.log("List size ", list.getSize());
