@@ -10,7 +10,7 @@ class linkedListQueue {
   }
 
   dequeue() {
-    return this.list.removeFromEnd();
+    return this.list.removeFromFront();
   }
 
   isEmpty() {
@@ -18,7 +18,7 @@ class linkedListQueue {
   }
 
   size() {
-    return this.list.size();
+    return this.list.getSize();
   }
 
   peek() {
@@ -29,3 +29,18 @@ class linkedListQueue {
     return this.list.print();
   }
 }
+
+const queue = new linkedListQueue();
+console.log(queue.isEmpty());
+
+queue.enqueue(10);
+queue.enqueue(20);
+queue.enqueue(30);
+
+queue.print();
+console.log(queue.size());
+
+queue.dequeue();
+queue.print();
+
+console.log(queue.peek());
