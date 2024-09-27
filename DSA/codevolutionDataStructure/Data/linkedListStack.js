@@ -5,15 +5,27 @@ class linkedListStack {
     this.list = new LinkedList();
   }
 
-  push(value) {}
+  push(value) {
+    this.list.prepend(value);
+  }
 
-  pop() {}
+  pop() {
+    return this.list.removeFromFront();
+  }
 
-  peek() {}
+  peek() {
+    return this.head.value;
+  }
 
-  isEmpty() {}
+  isEmpty() {
+    return this.list.isEmpty();
+  }
 
-  getSize() {}
+  getSize() {
+    this.list.getSize();
+  }
 
-  print() {}
+  print() {
+    return this.list.print();
+  }
 }
