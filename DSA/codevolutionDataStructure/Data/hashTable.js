@@ -41,3 +41,8 @@ const table = new HashTable(50);
 table.set("name", "saif");
 table.set("age", 23);
 table.display();
+
+console.log(table.get("name"));
+
+table.set("mane", "clark");
+table.display();
