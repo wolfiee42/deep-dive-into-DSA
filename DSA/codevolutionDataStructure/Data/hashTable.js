@@ -21,6 +21,19 @@ class HashTable {
     const index = this.hash(key);
     return this.table[index];
   }
+
+  remove(key) {
+    const index = this.hash(key);
+     this.table(key) = undefined
+  }
+
+  display(){
+    for(let i = 0; i<this.table.length;i++){
+        if(this.table[i]){
+            console.log(i, this.table[i]);
+        }
+    }
+  }
 }
 
 const table = new HashTable(50);
