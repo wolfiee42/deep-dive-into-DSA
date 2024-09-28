@@ -1,7 +1,7 @@
 class HashTable {
   constructor(size) {
     this.table = new Array(size);
-    this.size = this.size;
+    this.size = size;
   }
 
   hash(key) {
@@ -24,16 +24,20 @@ class HashTable {
 
   remove(key) {
     const index = this.hash(key);
-     this.table(key) = undefined
+    this.table[index] = undefined;
   }
 
-  display(){
-    for(let i = 0; i<this.table.length;i++){
-        if(this.table[i]){
-            console.log(i, this.table[i]);
-        }
+  display() {
+    for (let i = 0; i < this.table.length; i++) {
+      if (this.table[i]) {
+        console.log(i, this.table[i]);
+      }
     }
   }
 }
 
 const table = new HashTable(50);
+
+table.set("name", "saif");
+table.set("age", 23);
+table.display();
