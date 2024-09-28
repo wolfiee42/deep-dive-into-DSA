@@ -11,6 +11,11 @@ class HashTable {
     }
     return total % this.size;
   }
+
+  set(key, value) {
+    const index = this.hash(key);
+    this.table[index] = value;
+  }
 }
 
 const table = new HashTable(50);
