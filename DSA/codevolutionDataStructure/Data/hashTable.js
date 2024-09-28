@@ -14,7 +14,21 @@ class HashTable {
 
   set(key, value) {
     const index = this.hash(key);
-    this.table[index] = value;
+    // approach 01 - wrong
+    // this.table[index] = value;
+
+    //approach 02 - right
+    const bucket = this.table[index];
+    if (!bucket) {
+      bucket = [[key, value]];
+    } else {
+      const sameKeyItem = bucket.find((item) => item[0] === key);
+      if (sameKeyItem) {
+        sameKeyItem[1] = value;
+      } else {
+        bucket.push([key, value]);
+      }
+    }
   }
 
   get(key) {
