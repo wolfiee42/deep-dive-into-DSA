@@ -14,7 +14,7 @@ class HashTable {
 
   set(key, value) {
     const index = this.hash(key);
-    // approach 01 - wrong
+    // approach 01 - wrong // in this business logic, we are overwriting the value of the same key in the table with the new value in the same index which is not good.
     // this.table[index] = value;
 
     //approach 02 - right
