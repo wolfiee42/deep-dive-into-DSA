@@ -32,8 +32,21 @@ class HashTable {
   }
 
   get(key) {
+    // approach 01 - wrong // in this business logic, we are returning the value of the same key in the table with the new value in the same index which is not good.
+    // const index = this.hash(key);
+    // return this.table[index];
+
+    //approach 02 - right
     const index = this.hash(key);
-    return this.table[index];
+
+    const bucket = this.table[index];
+    if (bucket) {
+      const sameKeyItem = bucket.find((item) => item[0] === key);
+      if (sameKeyItem) {
+        return sameKeyItem[1];
+      }
+    }
+    return undefined;
   }
 
   remove(key) {
