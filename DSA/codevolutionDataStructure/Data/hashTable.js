@@ -50,8 +50,19 @@ class HashTable {
   }
 
   remove(key) {
+    // approach 01 - wrong // in this business logic,
+    // const index = this.hash(key);
+    // this.table[index] = undefined;
+
+    //approach 02 - right
     const index = this.hash(key);
-    this.table[index] = undefined;
+    const bucket = this.table[index];
+    if (bucket) {
+      const sameKeyItem = bucket.find((item) => item[0] === key);
+      if (sameKeyItem) {
+        return bucket.splice(bucket.indexOf(sameKeyItem), 1);
+      }
+    }
   }
 
   display() {
