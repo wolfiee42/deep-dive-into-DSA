@@ -20,7 +20,7 @@ class HashTable {
     //approach 02 - right
     const bucket = this.table[index];
     if (!bucket) {
-      bucket = [[key, value]];
+      this.table[index] = [[key, value]];
     } else {
       const sameKeyItem = bucket.find((item) => item[0] === key);
       if (sameKeyItem) {
@@ -83,4 +83,8 @@ table.display();
 console.log(table.get("name"));
 
 table.set("mane", "clark");
+table.set("name", "sara");
+table.display();
+
+table.remove("name");
 table.display();
