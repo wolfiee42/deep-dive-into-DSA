@@ -50,7 +50,7 @@ class HashTable {
   }
 
   remove(key) {
-    // approach 01 - wrong // in this business logic,
+    // approach 01 - wrong // in this business logic, we are removing the value of the same key in the table with the new value in the same index which is not good.
     // const index = this.hash(key);
     // this.table[index] = undefined;
 
